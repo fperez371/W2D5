@@ -20,7 +20,14 @@ class Node
 end
 
 class LinkedList
+  include Enumerable
+
   def initialize
+    @head = Node.new
+    @tail = Node.new
+
+    self.head.next = self.tail
+    self.tail.prev = self.head
   end
 
   def [](i)
@@ -55,6 +62,10 @@ class LinkedList
   def each
   end
 
+  protected
+
+  attr_accessor :head, :tail
+  
   # uncomment when you have `each` working and `Enumerable` included
   # def to_s
   #   inject([]) { |acc, link| acc << "[#{link.key}, #{link.val}]" }.join(", ")
