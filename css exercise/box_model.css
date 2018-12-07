@@ -1,0 +1,23 @@
+
+
+div {
+  border: 5px solid black;
+  padding: 50px;
+  width: 50%;
+  height: 8rem;
+}
+
+#first-div {
+  background-color: #39cccc;
+
+}
+
+#second-div {
+  box-sizing: border-box;
+  background-color: #ff4136;
+}
+
+div p {
+  font-size: 50%;
+  background-color: #7fdbff;
+}
